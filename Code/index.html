@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AR Business Card</title>
+  <style>
+    body {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      background: #f0f0f0;
+    }
+    /* This element will be anchored onto your target when detected */
+    .ar-example {
+      position: relative;
+      width: 600px;
+      height: 350px;
+      visibility: hidden;
+      background: white;
+      font-size: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      color: black;
+      transform: translateX(50%);
+      padding: 20px;
+      box-sizing: border-box;
+      border: 2px solid #000;
+      border-radius: 15px;
+    }
+    .qr-code {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 100px;
+      height: 100px;
+      background: #ddd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.8em;
+      color: #333;
+    }
+    .card-header {
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .card-title {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+    .card-details {
+      font-size: 1em;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <div class="ar-example" id="ar-example">
+    <div class="card-header">Oskari Suonpää</div>
+    <div class="card-title">Student</div>
+    <div class="card-details">Email: oskari.suonpaa@student.lab.fi</div>
+  </div>
+  
+  <!-- Load the MindAR library from your local libs folder -->
+  <script src="../../libs/mindar/mindar-image-three.prod.js"></script>
+  <!-- Load your main.js as a module -->
+  <script src="js/main.js" type="module"></script>
+</body>
+</html>
