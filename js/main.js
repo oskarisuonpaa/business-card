@@ -5,10 +5,10 @@ import { CSS3DObject } from "../libs/three.js-r132/examples/jsm/renderers/CSS3DR
 const THREE = window.MINDAR.IMAGE.THREE;
 
 async function startAR() {
-  // Initialize MindAR with your local target file
+  // Initialize MindAR with your local target file (ensure targets.mind is at your repository root)
   const mindArThreejs = new window.MINDAR.IMAGE.MindARThree({
     container: document.body,
-    imageTargetSrc: "./targets.mind", // Ensure this path is correct!
+    imageTargetSrc: "./targets.mind",
   });
   const { cssRenderer, renderer, cssScene, scene, camera } = mindArThreejs;
 
